@@ -107,33 +107,33 @@ SEARCH
 ====================*/
 
 const searchInput = document.querySelector(".search-box input");
+const searchBtn = document.querySelector(".search-box i");
 
-if (searchInput) {
+function searchProducts() {
 
-searchInput.addEventListener("input", function () {
-
-const value = this.value.toLowerCase();
+const value = searchInput.value.trim().toLowerCase();
 
 document.querySelectorAll(".product-card").forEach(card => {
 
 const text = card.innerText.toLowerCase();
 
-if (text.includes(value)) {
-
+if (text.includes(value) || value === "") {
 card.style.display = "block";
-
 } else {
-
 card.style.display = "none";
-
 }
-
-});
 
 });
 
 }
 
+searchInput.addEventListener("keyup", function(e){
+if(e.key==="Enter"){
+searchProducts();
+}
+});
+
+searchBtn.addEventListener("click", searchProducts);
 /*====================
 
 PRODUCT FILTER
