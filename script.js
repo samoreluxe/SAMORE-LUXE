@@ -1,85 +1,292 @@
-// ===============================
-// SAMORE LUXE V2
-// Premium JavaScript
-// ===============================
+/*==================================
 
-// Navbar background on scroll
-const navbar = document.querySelector(".navbar");
+SAMORE LUXE
+script.js
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 80) {
-    navbar.style.background = "rgba(0,0,0,0.95)";
-    navbar.style.backdropFilter = "blur(18px)";
-  } else {
-    navbar.style.background = "rgba(0,0,0,0.45)";
-  }
-});
+==================================*/
 
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+let cartCount = 0;
 
-    const target = document.querySelector(this.getAttribute("href"));
+const cartCounter = document.getElementById("cart-count");
 
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  });
-});
+const cartButtons = document.querySelectorAll(".cart");
 
-// Reveal animation
-const revealItems = document.querySelectorAll("section, .product");
+const wishlistButtons = document.querySelectorAll(".wishlist");
 
-const observer = new IntersectionObserver((entries) => {
+const quickButtons = document.querySelectorAll(".quick");
 
-  entries.forEach(entry => {
+/*====================
 
-    if (entry.isIntersecting) {
+ADD TO CART
 
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
+====================*/
 
-    }
+cartButtons.forEach(button=>{
 
-  });
+button.addEventListener("click",()=>{
 
-}, {
-  threshold: 0.15
-});
+cartCount++;
 
-revealItems.forEach(item => {
+cartCounter.innerText=cartCount;
 
-  item.style.opacity = "0";
-  item.style.transform = "translateY(50px)";
-  item.style.transition = "all .8s ease";
+button.innerHTML='<i class="fa-solid fa-check"></i> Added';
 
-  observer.observe(item);
+button.style.background="#2ecc71";
+
+setTimeout(()=>{
+
+button.innerHTML='<i class="fa-solid fa-cart-shopping"></i> Add to Cart';
+
+button.style.background="";
+
+},1500);
 
 });
 
-// Product hover animation
-document.querySelectorAll(".product").forEach(card => {
+});
 
-  card.addEventListener("mouseenter", () => {
-    card.style.transform = "translateY(-12px)";
-  });
+/*====================
 
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "translateY(0)";
-  });
+WISHLIST
+
+====================*/
+
+wishlistButtons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+const icon=button.querySelector("i");
+
+icon.classList.toggle("fa-regular");
+
+icon.classList.toggle("fa-solid");
+
+button.style.color="#B76E79";
 
 });
 
-// Current year in footer (optional)
-const year = new Date().getFullYear();
+});
 
-const footerText = document.querySelector("footer p:last-child");
+/*====================
 
-if (footerText) {
-  footerText.innerHTML = `© ${year} Samore Luxe. All Rights Reserved.`;
+QUICK VIEW
+
+====================*/
+
+quickButtons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+const card=button.closest(".product-card");
+
+const title=card.querySelector("h3").innerText;
+
+const price=card.querySelector(".price").innerText;
+
+const desc=card.querySelector("p").innerText;
+
+alert(
+
+title+
+
+"\n\n"+
+
+price+
+
+"\n\n"+
+
+desc
+
+);
+
+});
+
+});
+/*====================
+
+SEARCH
+
+====================*/
+
+const searchInput = document.querySelector(".search-box input");
+
+const products = document.querySelectorAll(".product-card");
+
+if(searchInput){
+
+searchInput.addEventListener("keyup",()=>{
+
+const value = searchInput.value.toLowerCase();
+
+products.forEach(product=>{
+
+const title = product.querySelector("h3").innerText.toLowerCase();
+
+const desc = product.querySelector("p").innerText.toLowerCase();
+
+if(title.includes(value) || desc.includes(value)){
+
+product.style.display="block";
+
+}else{
+
+product.style.display="none";
+
 }
 
-console.log("Samore Luxe Website Loaded Successfully");
+});
+
+});
+
+}
+
+/*====================
+
+PRODUCT FILTER
+
+====================*/
+
+const filterButtons=document.querySelectorAll(".filter-buttons button");
+
+filterButtons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+filterButtons.forEach(btn=>btn.classList.remove("active"));
+
+button.classList.add("active");
+
+});
+
+});
+
+/*====================
+
+SMOOTH NAV ACTIVE
+
+====================*/
+
+const sections=document.querySelectorAll("section");
+
+const navLinks=document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const top=section.offsetTop-140;
+
+if(scrollY>=top){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+/*====================
+
+HEADER SHADOW
+
+====================*/
+
+const header=document.querySelector("header");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>60){
+
+header.style.background="rgba(10,10,10,.98)";
+
+header.style.boxShadow="0 10px 35px rgba(0,0,0,.35)";
+
+}else{
+
+header.style.background="rgba(10,10,10,.92)";
+
+header.style.boxShadow="none";
+
+}
+
+});
+
+/*====================
+
+SCROLL REVEAL
+
+====================*/
+
+const revealItems=document.querySelectorAll(
+
+".product-card,.review-card,.about-container,.packaging-grid img,.brand-story,.section-heading"
+
+);
+
+const reveal=()=>{
+
+const trigger=window.innerHeight*0.88;
+
+revealItems.forEach(item=>{
+
+const top=item.getBoundingClientRect().top;
+
+if(top<trigger){
+
+item.style.opacity="1";
+
+item.style.transform="translateY(0)";
+
+}
+
+});
+
+};
+
+revealItems.forEach(item=>{
+
+item.style.opacity="0";
+
+item.style.transform="translateY(60px)";
+
+item.style.transition=".8s ease";
+
+});
+
+window.addEventListener("scroll",reveal);
+
+window.addEventListener("load",reveal);
+
+/*====================
+
+CURRENT YEAR
+
+====================*/
+
+const copyright=document.querySelector(".copyright");
+
+if(copyright){
+
+copyright.innerHTML=`© ${new Date().getFullYear()} Samore Luxe. All Rights Reserved.`;
+
+}
+
+/*====================
+
+END OF SCRIPT.JS
+
+====================*/
