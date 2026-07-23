@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Samore Luxe | Luxury Jewellery</title>
+<title>Samore Luxe | Luxury Handmade Jewellery</title>
 
-<meta name="description" content="Luxury Handmade Earrings & Anklets by Samore Luxe">
+<meta name="description" content="Luxury Handmade Earrings & Anklets">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <link rel="stylesheet" href="style.css">
 
@@ -21,17 +24,23 @@
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
 <nav class="navbar">
 
-<div class="logo-section">
+<div class="logo-area">
 
-<img src="assets/logo.png" class="logo" alt="Samore Luxe">
+<a href="#home">
+
+<img src="assets/logo.png" alt="Samore Luxe" class="logo">
+
+</a>
 
 <div class="brand">
 
-<h1>Samore Luxe</h1>
+<h2>Samore Luxe</h2>
 
 <p>Jewellery Designed by Samia</p>
 
@@ -43,11 +52,13 @@
 
 <li><a href="#home">Home</a></li>
 
-<li><a href="#collection">Collections</a></li>
+<li><a href="#collection">Collection</a></li>
+
+<li><a href="#packaging">Packaging</a></li>
 
 <li><a href="#about">About</a></li>
 
-<li><a href="#packaging">Packaging</a></li>
+<li><a href="#reviews">Reviews</a></li>
 
 <li><a href="#contact">Contact</a></li>
 
@@ -55,21 +66,32 @@
 
 <div class="nav-icons">
 
-<a href="#" title="Search">
+<div class="search-box">
+
+<input type="text" placeholder="Search Jewellery">
+
 <i class="fa-solid fa-magnifying-glass"></i>
-</a>
 
-<a href="#" title="Wishlist">
+</div>
+
+<button class="icon-btn">
+
 <i class="fa-regular fa-heart"></i>
-</a>
 
-<a href="#" title="Cart">
+</button>
+
+<button class="icon-btn cart-btn-top">
+
 <i class="fa-solid fa-cart-shopping"></i>
-<span class="cart-count">0</span>
-</a>
 
-<a href="https://www.instagram.com/samoreluxe/" target="_blank">
+<span id="cart-count">0</span>
+
+</button>
+
+<a href="https://www.instagram.com/samoreluxe/" target="_blank" class="icon-btn">
+
 <i class="fa-brands fa-instagram"></i>
+
 </a>
 
 </div>
@@ -78,34 +100,41 @@
 
 </header>
 
-<section class="hero" id="home">
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
 
 <div class="hero-overlay"></div>
 
 <div class="hero-content">
 
-<h1>Samore Luxe</h1>
+<h4>Luxury Handmade Jewellery</h4>
 
-<h2>Timeless Luxury Jewellery</h2>
+<h1>Samore Luxe</h1>
 
 <p>
 
-“Where jewels whisper stories of grace,
-and every shimmer is a promise of timeless allure.”
+🌹
+
+Where jewels whisper stories of grace,
+
+and every shimmer is a promise
+
+of timeless allure.
 
 </p>
 
 <div class="hero-buttons">
 
-<a href="#collection" class="gold-btn">
+<a href="#collection" class="primary-btn">
 
-Shop Collection
+Explore Collection
 
 </a>
 
-<a href="#about" class="outline-btn">
+<a href="#about" class="secondary-btn">
 
-Discover More
+Our Story
 
 </a>
 
@@ -115,17 +144,27 @@ Discover More
 
 </section>
 
+<!-- ================= BRAND ================= -->
+
 <section class="brand-story">
 
-<div class="story-content">
+<div class="container">
 
-<h2>Luxury Crafted With Passion</h2>
+<h2>
+
+Timeless Luxury Crafted By Hand
+
+</h2>
 
 <p>
 
-Every Samore Luxe creation is handcrafted with elegance, timeless artistry and premium craftsmanship.
+Every Samore Luxe piece is handcrafted with precision,
 
-Every shimmer is created to celebrate your individuality.
+elegance and love.
+
+Designed to celebrate femininity,
+
+confidence and timeless beauty.
 
 </p>
 
@@ -133,499 +172,1091 @@ Every shimmer is created to celebrate your individuality.
 
 </section>
 
+<!-- ================= COLLECTION ================= -->
+
 <section id="collection">
 
-<h2 class="section-title">
+<div class="section-heading">
+
+<h2>
 
 Featured Collection
 
 </h2>
 
-<div class="category-buttons">
+<p>
 
-<button class="active">All</button>
+Discover our handcrafted luxury earrings & anklets.
 
-<button>Earrings</button>
-
-<button>Anklets</button>
-
-<button>New Arrival</button>
-
-<button>Best Seller</button>
-
-</div>
-
-<div class="products">
- <div class="product">
-
-<div class="badge">BEST SELLER</div>
-
-<img src="assets/products/product1.png" alt="Black and Gold Hoop Jhumka">
-
-<div class="product-info">
-
-<h3>Black & Gold Hoop Jhumka</h3>
-
-<p>Elegant handcrafted black & gold hoop jhumka.</p>
-
-<span class="price">₹890</span>
-
-<div class="product-actions">
-
-<button class="wishlist-btn">
-<i class="fa-regular fa-heart"></i>
-</button>
-
-<button class="cart-btn">
-<i class="fa-solid fa-cart-shopping"></i>
-Add to Cart
-</button>
-
-<button class="quick-btn">
-<i class="fa-regular fa-eye"></i>
-Quick View
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<div class="badge new">NEW</div>
-
-<img src="assets/products/product2.png" alt="Multi Color Hoop Earrings">
-
-<div class="product-info">
-
-<h3>Multi Color Hoop Earrings</h3>
-
-<p>Luxury handcrafted colourful hoop earrings.</p>
-
-<span class="price">₹750</span>
-
-<div class="product-actions">
-
-<button class="wishlist-btn">
-<i class="fa-regular fa-heart"></i>
-</button>
-
-<button class="cart-btn">
-<i class="fa-solid fa-cart-shopping"></i>
-Add to Cart
-</button>
-
-<button class="quick-btn">
-<i class="fa-regular fa-eye"></i>
-Quick View
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<img src="assets/products/product3.png">
-
-<div class="product-info">
-
-<h3>Soft Pink Pearl Hoop</h3>
-
-<p>Premium pearl hoop earrings with luxury finish.</p>
-
-<span class="price">₹750</span>
-
-<div class="product-actions">
-
-<button class="wishlist-btn">
-<i class="fa-regular fa-heart"></i>
-</button>
-
-<button class="cart-btn">
-<i class="fa-solid fa-cart-shopping"></i>
-Add to Cart
-</button>
-
-<button class="quick-btn">
-Quick View
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<img src="assets/products/product4.png">
-
-<div class="product-info">
-
-<h3>Sky Blue Gold Hoop</h3>
-
-<p>Luxury handcrafted blue hoop earrings.</p>
-
-<span class="price">₹890</span>
-
-<div class="product-actions">
-
-<button class="wishlist-btn">
-<i class="fa-regular fa-heart"></i>
-</button>
-
-<button class="cart-btn">
-<i class="fa-solid fa-cart-shopping"></i>
-Add to Cart
-</button>
-
-<button class="quick-btn">
-Quick View
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<img src="assets/products/product5.png">
-
-<div class="product-info">
-
-<h3>Ruby Red Hoop</h3>
-
-<p>Luxury handcrafted ruby red earrings.</p>
-
-<span class="price">₹890</span>
-
-<div class="product-actions">
-
-<button class="wishlist-btn">
-<i class="fa-regular fa-heart"></i>
-</button>
-
-<button class="cart-btn">
-<i class="fa-solid fa-cart-shopping"></i>
-Add to Cart
-</button>
-
-<button class="quick-btn">
-Quick View
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<img src="assets/products/product6.png">
-
-<div class="product-info">
-
-<h3>Emerald Gold Hoop</h3>
-
-<p>Premium emerald handcrafted earrings.</p>
-
-<span class="price">₹890</span>
-
-<div class="product-actions">
-
-<button class="wishlist-btn">
-<i class="fa-regular fa-heart"></i>
-</button>
-
-<button class="cart-btn">
-<i class="fa-solid fa-cart-shopping"></i>
-Add to Cart
-</button>
-
-<button class="quick-btn">
-Quick View
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<img src="assets/products/product7.png">
-
-<div class="product-info">
-
-<h3>Ruby Tassel Hoop</h3>
-
-<p>Elegant handcrafted tassel earrings.</p>
-
-<span class="price">₹820</span>
-
-<div class="product-actions">
-
-<button class="wishlist-btn">
-<i class="fa-regular fa-heart"></i>
-</button>
-
-<button class="cart-btn">
-<i class="fa-solid fa-cart-shopping"></i>
-Add to Cart
-</button>
-
-<button class="quick-btn">
-Quick View
-</button>
-
-</div>
-
-</div>
-
-</div> 
- <div class="product">
-
-    <img src="assets/products/product8.png" alt="Emerald Green & Gold Beads Hoop">
-
-    <div class="product-info">
-
-        <h3>Emerald Green & Gold Beads Hoop</h3>
-
-        <p>Premium handcrafted emerald green hoop earrings.</p>
-
-        <span class="price">₹700</span>
-
-        <div class="product-actions">
-            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-            <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-            <button class="quick-btn"><i class="fa-regular fa-eye"></i> Quick View</button>
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="product">
-
-    <img src="assets/products/product9.png" alt="Black & Gold Noir Charm Hoop">
-
-    <div class="product-info">
-
-        <h3>Black & Gold Noir Charm Hoop</h3>
-
-        <p>Luxury black & gold handcrafted earrings.</p>
-
-        <span class="price">₹780</span>
-
-        <div class="product-actions">
-            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-            <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-            <button class="quick-btn"><i class="fa-regular fa-eye"></i> Quick View</button>
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="product">
-
-    <img src="assets/products/product10.png" alt="Turquoise Crystal Anklet">
-
-    <div class="product-info">
-
-        <h3>Turquoise Crystal Anklet</h3>
-
-        <p>Elegant handcrafted crystal anklet.</p>
-
-        <span class="price">₹1250</span>
-
-        <div class="product-actions">
-            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-            <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-            <button class="quick-btn"><i class="fa-regular fa-eye"></i> Quick View</button>
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="product">
-
-    <img src="assets/products/product11.png" alt="Emerald Green Beads Anklet">
-
-    <div class="product-info">
-
-        <h3>Emerald Green Beads Anklet</h3>
-
-        <p>Luxury handcrafted anklet with emerald detailing.</p>
-
-        <span class="price">₹1000</span>
-
-        <div class="product-actions">
-            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-            <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-            <button class="quick-btn"><i class="fa-regular fa-eye"></i> Quick View</button>
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="product">
-
-    <img src="assets/products/product12.png" alt="Golden Aura Pearl Anklet">
-
-    <div class="product-info">
-
-        <h3>Golden Aura Pearl Anklet</h3>
-
-        <p>Timeless pearl anklet with premium finish.</p>
-
-        <span class="price">₹1150</span>
-
-        <div class="product-actions">
-            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-            <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-            <button class="quick-btn"><i class="fa-regular fa-eye"></i> Quick View</button>
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="product">
-
-    <div class="badge">NEW</div>
-
-    <img src="assets/products/product13.png" alt="Emerald & Amethyst Anklet">
-
-    <div class="product-info">
-
-        <h3>Emerald & Amethyst Anklet</h3>
-
-        <p>Luxury handcrafted anklet with emerald & amethyst stones.</p>
-
-        <span class="price">₹950</span>
-
-        <div class="product-actions">
-            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-            <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-            <button class="quick-btn"><i class="fa-regular fa-eye"></i> Quick View</button>
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="packaging" class="packaging">
-
-<h2 class="section-title">Luxury Packaging</h2>
-
-<p class="section-subtitle">
-Every Samore Luxe jewellery piece arrives beautifully wrapped in our signature luxury packaging, making every purchase feel like an unforgettable gift.
 </p>
 
-<div class="packaging-gallery">
+</div>
 
-<img src="assets/packaging/packaging1.png" alt="Luxury Packaging">
+<div class="filter-buttons">
 
-<img src="assets/packaging/packaging2.png" alt="Luxury Gift Box">
+<button class="active">
 
-<img src="assets/packaging/packaging3.png" alt="Luxury Jewellery Packaging">
+All
+
+</button>
+
+<button>
+
+Earrings
+
+</button>
+
+<button>
+
+Anklets
+
+</button>
+
+<button>
+
+Best Seller
+
+</button>
+
+<button>
+
+New Arrival
+
+</button>
+
+</div>
+
+<div class="product-grid">
+
+<!-- PRODUCT 1 -->
+
+<div class="product-card">
+
+<div class="badge">
+
+Best Seller
+
+</div>
+
+<img src="assets/products/product1.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Black & Gold Hoop Jhumka
+
+</h3>
+
+<p>
+
+Elegant handcrafted luxury hoop earrings.
+
+</p>
+
+<div class="price">
+
+₹890
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 2 -->
+
+<div class="product-card">
+
+<div class="badge new">
+
+New
+
+</div>
+
+<img src="assets/products/product2.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Pastel Hoop Earrings
+
+</h3>
+
+<p>
+
+Luxury handmade pastel earrings.
+
+</p>
+
+<div class="price">
+
+₹790
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+<!-- PRODUCT 3 -->
+
+<div class="product-card">
+
+<div class="badge">
+
+Trending
+
+</div>
+
+<img src="assets/products/product3.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Soft Pink Pearl Hoop
+
+</h3>
+
+<p>
+
+Elegant handcrafted pearl hoop earrings.
+
+</p>
+
+<div class="price">
+
+₹790
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 4 -->
+
+<div class="product-card">
+
+<img src="assets/products/product4.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Sky Blue Hoop Earrings
+
+</h3>
+
+<p>
+
+Luxury handcrafted sky blue hoop earrings.
+
+</p>
+
+<div class="price">
+
+₹820
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 5 -->
+
+<div class="product-card">
+
+<div class="badge">
+
+Best Seller
+
+</div>
+
+<img src="assets/products/product5.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Ruby Red Hoop
+
+</h3>
+
+<p>
+
+Premium handcrafted ruby red hoop earrings.
+
+</p>
+
+<div class="price">
+
+₹850
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 6 -->
+
+<div class="product-card">
+
+<img src="assets/products/product6.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Emerald Gold Hoop
+
+</h3>
+
+<p>
+
+Luxury emerald handcrafted earrings.
+
+</p>
+
+<div class="price">
+
+₹890
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 7 -->
+
+<div class="product-card">
+
+<div class="badge new">
+
+New
+
+</div>
+
+<img src="assets/products/product7.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Ruby Tassel Hoop
+
+</h3>
+
+<p>
+
+Elegant tassel hoop earrings.
+
+</p>
+
+<div class="price">
+
+₹820
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 8 -->
+
+<div class="product-card">
+
+<img src="assets/products/product8.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Emerald Green Hoop
+
+</h3>
+
+<p>
+
+Premium emerald bead earrings.
+
+</p>
+
+<div class="price">
+
+₹760
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+<!-- PRODUCT 9 -->
+
+<div class="product-card">
+
+<div class="badge">
+
+Best Seller
+
+</div>
+
+<img src="assets/products/product9.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Midnight Black Hoop
+
+</h3>
+
+<p>
+
+Elegant black & rose gold handcrafted earrings.
+
+</p>
+
+<div class="price">
+
+₹850
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 10 -->
+
+<div class="product-card">
+
+<div class="badge new">
+
+New
+
+</div>
+
+<img src="assets/products/product10.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Turquoise Crystal Anklet
+
+</h3>
+
+<p>
+
+Luxury handcrafted crystal anklet.
+
+</p>
+
+<div class="price">
+
+₹1,250
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 11 -->
+
+<div class="product-card">
+
+<img src="assets/products/product11.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Classic Pearl Earrings
+
+</h3>
+
+<p>
+
+Minimal handcrafted pearl earrings.
+
+</p>
+
+<div class="price">
+
+₹690
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 12 -->
+
+<div class="product-card">
+
+<div class="badge">
+
+Trending
+
+</div>
+
+<img src="assets/products/product12.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Rose Bloom Earrings
+
+</h3>
+
+<p>
+
+Luxury floral handcrafted earrings.
+
+</p>
+
+<div class="price">
+
+₹940
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 13 -->
+
+<div class="product-card">
+
+<div class="badge">
+
+Limited
+
+</div>
+
+<img src="assets/products/product13.png" alt="Product">
+
+<div class="product-info">
+
+<h3>
+
+Royal Rose Anklet
+
+</h3>
+
+<p>
+
+Elegant handcrafted rose gold anklet.
+
+</p>
+
+<div class="price">
+
+₹1,390
+
+</div>
+
+<div class="product-buttons">
+
+<button class="wishlist">
+
+<i class="fa-regular fa-heart"></i>
+
+</button>
+
+<button class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+<button class="quick">
+
+Quick View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
+
+<!-- ================= PACKAGING ================= -->
+
+<section id="packaging">
+
+<div class="section-heading">
+
+<h2>
+
+Luxury Packaging
+
+</h2>
+
+<p>
+
+Every Samore Luxe order arrives beautifully packed in our signature luxury gift box.
+
+</p>
+
+</div>
+
+<div class="packaging-grid">
+
+<img src="assets/packaging/packaging1.png" alt="Packaging">
+
+<img src="assets/packaging/packaging2.png" alt="Packaging">
+
+<img src="assets/packaging/packaging3.png" alt="Packaging">
+
+</div>
+
+</section>
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
-<h2 class="section-title">About Samore Luxe</h2>
+<div class="about-container">
 
-<p class="about-text">
+<div class="about-image">
 
-Samore Luxe is a luxury handcrafted jewellery brand founded by Samia. Every earring and anklet is designed with elegance, timeless craftsmanship and attention to every detail. Our vision is to create jewellery that feels luxurious, graceful and unforgettable.
+<img src="assets/logo.png" alt="Samore Luxe">
+
+</div>
+
+<div class="about-content">
+
+<span class="small-title">
+
+ABOUT US
+
+</span>
+
+<h2>
+
+Jewellery Designed By Samia
+
+</h2>
+
+<p>
+
+Samore Luxe is a luxury handmade jewellery brand created for women who love timeless elegance and sophisticated beauty.
+
+Every pair of earrings and every anklet is handcrafted with attention to detail, ensuring each design feels unique, graceful and luxurious.
 
 </p>
 
+<p>
+
+Our vision is simple—
+
+to create jewellery that becomes a beautiful part of your memories.
+
+</p>
+
+<a href="#collection" class="primary-btn">
+
+Shop Collection
+
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="reviews">
+<!-- ================= REVIEWS ================= -->
 
-<h2 class="section-title">Client Love</h2>
+<section id="reviews">
 
-<div class="review-box">
+<div class="section-heading">
+
+<h2>
+
+Customer Love
+
+</h2>
+
+<p>
+
+Every smile inspires us to create something even more beautiful.
+
+</p>
+
+</div>
+
+<div class="review-grid">
+
+<div class="review-card">
+
+<div class="stars">
 
 ★★★★★
 
+</div>
+
 <p>
 
-"Absolutely stunning quality and elegant packaging. It feels truly luxurious."
+The quality exceeded my expectations. The packaging looked absolutely luxurious and the earrings are stunning.
 
 </p>
 
-<strong>— Happy Customer</strong>
+<h4>
+
+Priya S.
+
+</h4>
+
+</div>
+
+<div class="review-card">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+Beautiful craftsmanship and very lightweight. Definitely my favourite handmade jewellery brand.
+
+</p>
+
+<h4>
+
+Ayesha K.
+
+</h4>
+
+</div>
+
+<div class="review-card">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+Everything felt premium—from the box to the jewellery. Highly recommended.
+
+</p>
+
+<h4>
+
+Riya M.
+
+</h4>
+
+</div>
 
 </div>
 
 </section>
+
+<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
-<h2 class="section-title">Contact Us</h2>
+<div class="section-heading">
+
+<h2>
+
+Get In Touch
+
+</h2>
+
+<p>
+
+We'd love to hear from you.
+
+</p>
+
+</div>
 
 <div class="contact-box">
 
-<a href="mailto:samoreluxe@gmail.com">
-<i class="fa-solid fa-envelope"></i>
-samoreluxe@gmail.com
+<a href="https://wa.me/9191726786110" target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+WhatsApp
+
 </a>
 
-<a href="https://wa.me/917267868110" target="_blank">
-<i class="fab fa-whatsapp"></i>
-WhatsApp Us
+<a href="mailto:samoreluxe@gmail.com">
+
+<i class="fa-solid fa-envelope"></i>
+
+Email
+
 </a>
 
 <a href="https://www.instagram.com/samoreluxe/" target="_blank">
-<i class="fab fa-instagram"></i>
+
+<i class="fa-brands fa-instagram"></i>
+
 Instagram
+
 </a>
 
 </div>
 
 </section>
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-<h2>Samore Luxe</h2>
+<img src="assets/logo.png" class="footer-logo" alt="Samore Luxe">
 
-<p>Jewellery Designed by Samia</p>
+<h2>
+
+Samore Luxe
+
+</h2>
 
 <p>
+
+Jewellery Designed by Samia
+
+</p>
+
+<p class="footer-tagline">
+
+🌹 "Where jewels whisper stories of grace, and every shimmer is a promise of timeless allure."
+
+</p>
+
+<div class="footer-social">
+
+<a href="https://www.instagram.com/samoreluxe/" target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+<a href="https://wa.me/9191726786110" target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+</div>
+
+<p class="copyright">
+
 © 2026 Samore Luxe. All Rights Reserved.
+
 </p>
 
 </footer>
@@ -634,4 +1265,4 @@ Instagram
 
 </body>
 
-</html>   
+</html>
